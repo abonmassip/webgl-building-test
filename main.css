@@ -1,0 +1,164 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap);
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body
+{
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index: -9999;
+}
+
+.point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    user-select: none;
+}
+
+.point .label {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background: #00000077;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 100;
+    font-size: 14px;
+    cursor: pointer;
+    transform: scale(0, 0);
+    transition: transform 0.3s;
+    will-change: transform;
+}
+
+.point:hover .label{
+    background: #ffffff77;
+}
+.point:hover .text {
+    opacity: 1;
+}
+
+.point.visible .label {
+    transform: scale(1, 1); 
+}
+
+.point .text {
+    position: absolute;
+    top: 30px;
+    left: -70px;
+    width: 140px;
+    padding: 10px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #000000;
+    line-height: 1.3em;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-weight: 100;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    will-change: opacity;
+    pointer-events: none;
+}
+
+header {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(to bottom, white, rgba(255,255,255,0.4));
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    width: 250px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+header ul li {
+    width: 80px;
+    height: 30px;
+    border-top: 1px solid #a7a7a7;
+    color: #7a7a7a;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 20px;
+    transition-delay: .84s;
+    transition: color .5s;
+}
+
+header ul li:hover {
+    color: black;
+}
+
+.description {
+    position: absolute;
+    width: 40vw;
+    padding: 40px;
+    border-radius: 4px;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 2rem;
+    text-align: justify;
+    background-color: #edf1f8cc;
+    transform: scale(0,0);
+    opacity: 0;
+    transition: opacity 1s;
+    will-change: opacity;
+}
+
+.description.visible {
+    transform: scale(1,1);
+    opacity: 1;
+}
+
+.description h1 {
+    margin-bottom: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.close:hover {
+    text-decoration: underline;
+}
+
+/*# sourceMappingURL=main.css.map*/
